@@ -1,0 +1,241 @@
+
+String s="Ramu is a good boy once upon a time "
+
+string a = "ab     df  df g  hh       yu"
+String[ s1=a.split("/s+");
+{"ab","df","df","g","hh","yu" }
+
+
+
+string[] s = ["sa", "sb","sb"]
+
+HashMap<string,integer> map = new hasmap<>;
+
+
+for(int i=0;i<lenght;i++){
+	if(map.containsKey(a[i]){
+		map.put(a[i],1);                                                            
+	}
+	else{
+	 map[a[i]] = map[a[i]].value+1;
+	}
+}
+
+string chars = ""
+string integers = ""
+integers+="s[i]"
+integers = integers+s[;]
+
+integers
+
+sdfgf1sdvdvs3dfdss
+
+a , e
+
+ i o u
+
+a
+elementsi
+
+
+r =1
+a =2
+m =1
+
+character
+ key value
+ character/string integer
+ 
+ 
+hasmap m => empty
+chars
+
+2
+9
+
+0=1+1= 2
+
+10
+
+
+if(m.keycontains(chars[i]){
+	m.put(chars[i],1);
+}
+else{
+m[chars[i]] = m[chars[i]].value+1
+}
+
+
+
+conditional statement if, switch ,enested 
+loops for forach, while do while
+
+
+nested
+
+g,1,2,3,4
+
+floor = 5
+if(floor ==1)
+	return stoopeed at 1;
+else if(floor ==2)
+	return stoopeed at 2;
+else if(floor ==3)
+	return stoopeed at 3;
+	
+	
+Switch(floor):{
+case "1":
+	return flor stoped at 1;
+case "2":
+	return flor stoped at 1
+case "3":
+	return flor stoped at 1;
+
+}
+
+list<WebElement> elements = driver.FindElements
+
+for(int i=0;i<elements.length;i++){
+	string text = elements[i].text;
+}
+
+for(int i=n-1;i>=0;i--)
+
+
+
+
+foreach(WebElement e : elements){
+string text = e.text;
+}
+
+driver.Find
+
+WebElement e=driver.findElement(By.xpath("//tagname[@id='name']).click();
+List<WebElement> elements=driver.findelemnets(By.id("name");
+for(WebElement e: elements){
+SOP(e.getText());
+}
+
+
+String url="";
+String username=" ";
+String password="";
+Class
+
+connection=null;
+
+connection con=DriverManager.getConnection("url","username","password");
+statemnet st=con.createstaement();
+
+resultset rs=st.setQuery("select*from tables");
+while(rs.next()){
+sysout("rs.getString(usernmae)
+
+rs.close();
+st.close();
+conn.close();
+
+class A{
+
+public int add(int a,int b){
+int r=a+b;
+return r;
+
+}
+public static void main(String args[]){
+
+A obj=new A();
+int result=obj.add(3,2);
+system.out.println(rresult)
+
+
+}
+}
+int num[][]=new int[3][4];
+3 individual arrays with 4 elementsS
+
+
+
+take screenshot
+
+TakeScreenShot ss=(Takescreenshot)driver;
+File src=new File9(path
+
+
+File scrnsht=((Takescreenshot)driver).getScreenshotAs(outputType.FILE);
+File dest=new File("path");
+FileUtils.copyFile(src,dst);
+
+
+
+File src=((TakeScreenShot)driver).getSCreenshotAs(outputTYpe.FILE);
+File dest=new File("path);
+FileUtils.copeFile(src,dst)
+
+driver.manage().timeOuts().implicitly Wait(10,TIMUEUNIT.SECONDS)
+WebDriverWait w=new WebDriverWait(driver,10);
+w.untilExpectedConditions.visibilityOfElementLocated(By.xptah(""));
+
+
+
+WebDriverWait w=new
+
+
+FileInputStream fs=new FileInputStream("path");
+File f=ne File("path");
+Worbook wb=Workbook.getWorkBook(f);
+Sheet sh=wb.getSheet();
+int r=sh.getROws();
+file (Row r: sheet){
+for(cell c:row){
+
+}
+
+}
+
+int c=sh.getColumns)_
+
+
+Properties prop=new Properties();
+FileInpuutStream fis=new FileInput Streasm(config.properties);
+prop.load(fis);
+String us=prop.getProperties("usernmae");
+String pw=prop.getProperties("Password");
+String url=prop.getProperties("url");
+
+
+
+JavaScriptExecutor js=(JavaScriptExecutor)driver;
+js.executeScript("arguments[0].click;",e);
+js.executeScript("arguments[0].scrollIntoView(true);",e);
+js.executeScript("windows.scrollTo(documets.body.scrollHeight);")
+js.executeScript("document.getElementById('username').value='test';"
+String url=)String)js.executescript("")
+
+
+
+https://github.com/Soumya-siri123/testrepo.git
+
+
+
+luc is getting  enabled after 17dys instead of 15 days
+9
+
+
+without uploading LUC photograph 1 able to submit
+
+
+selenium inbuilt override methods>chromeDriver()
+nosuch elemt exception fix>iframe
+frames
+cucmber >Hooks,background
+checked and unchecked exceptions and how to handle
+total test cases in project: 500 for 5 members
+
+Runner file
+API testing
+CICD pipeline
+jenkins
+parrlel testing
+10 test cases have same methods

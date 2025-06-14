@@ -1,0 +1,300 @@
+
+I am soumya. I am from Hyderabad I have completed my education in the 2016. I have started my career with Akshara Pvt Ltd as junior qa engineer. 
+and I am currently working with Sub-k impact solutions as Senior Autoamtion Test Engineer.
+
+This is All about me 
+
+Roles and responsibilities;
+My role is senior Automation Test Engineer here.
+My responsibilities are Writing the manual test cases. Defect management, Involving in the releases like regression.
+Implementing Automation test cases with fulfilling the requirements. etc
+
+
+Testing Process:
+My work will be in the form of user stories. Once we receive the user story will analyse the story.
+will write test cases for story which is relavant to the acceptance criteria. once developer completes the development 
+then we will start testing the user story. if we find any bug we will follow bug life cycle. once it is defect free
+we will close the story.
+
+for the automation we will start n-2 spint stories which is eligible for regression. once automation test case develoment
+is done we will send for review in the form of pull request. my lead will review it and push the code in the dev suit.
+
+Git commands:
+git status (check changes in the files)
+git add filename  (adding the files into stage)
+git commit -m "message"  (commiting the changes)
+git push  (changes pushing to the repo with specifc commit)
+git pull(used to fetch and download content from a remote repository and immediately update the local repository to match that content)
+
+git checkout branch (to swith to the branch like git checkout develop)
+git checkout file (to revert the changes of the file like git checkout filename)
+git merge branchname (merging changes from one branch to another branch)
+
+
+Framework: 
+Hybid meaning if the framework has more than one combination then it is called as hybrid framework
+ 
+we follow hyderbrid framework whcih is the combination of (Bdd,selenium and data driven).
+
+BDD: stands for Behaviour Driven Develoment. here bdd follow gherkin language which has given, when, then etc..
+
+Selenium: To identify the page elment we used selenium which is able to identify the elements with locators like xpath, id css etc..
+
+Data Driven : which means we save our test data like username, password or any test case related information in the property file.
+	in the run time when it is required we will be using it. 
+	How o read property file:
+	
+	
+	=========================================
+We start our test case automation with featurefile in the featurefile will have the scenarios which is nothing but a test case.
+for the featurefile we will be having step defincation file this step defincation file will be linked to selenium file.
+
+Sceanrio> Step Defincation > Selenium (LoginPage.java/ HomePage.java/ Formpage.java)
+
+Login.Feature
+------------
+Sceanrio: Validate Login	
+	Given User is on LoginPage
+	When user enters username and password
+	Then user should see home page
+	
+	
+LoginSteps.java
+---------------
+loginPage loginObj = new loginPage();
+
+Given(^User is on LoginPage$)
+public void userLoginPage(){
+	loginObj.login("abc","123");
+}
+
+loginPage.java
+--------------
+FindBy(id="username")
+private webElement userName
+
+FindBy(id="username")
+private webElement password
+
+FindBy(id="username")
+private webElement loginbtn
+
+public void login(string username, string password){
+	this.userName.sendkeys(username);
+	this.password.sendkeys(password);
+	loginbtn.click();
+}
+
+POM(Page Object Model):
+for individual webpages we will maintain separate page.java file with defining all the correcsponing elements and it's methods.
+
+
+
+
+	        s = s.toLowerCase();
+	        // Convert string to lowercase for case-insensitive counting
+
+	        Map<Character, Integer> charCountMap = new HashMap<>();
+
+	        for (char c : s.toCharArray()) {
+	            if (Character.isWhitespace(c)) continue; // skip spaces
+
+	            charCountMap.put(c, charCountMap.getOrDefault(c, 0) + 1);
+	        }
+
+	        // Print character counts
+	        for (Map.Entry<Character, Integer> entry : charCountMap.entrySet()) {
+	            System.out.println("Character '" + entry.getKey() + "' --> " + entry.getValue() + " times.");
+	        }
+
+
+
+
+Maven is a bulid tool from apache foundation
+here we have pom.xml default
+here we can add dependencies of like selenium,testng,junit,cucmber..etc to maintain 3rd party libreries
+if we add dependencies, we get related jar files stored in maven dependencies,JRE system library
+like with manual java project if have any update in selenium or any other tools, we need to delete old jar files and need to download updated jar files. it is a big procees to overcome this in maven project once we add relateds dependency easily we can get we ahev inbuilt methods,and classes of updated jar file
+It will provide project structure
+pom.xml:
+1. dependencis
+2.plugins>have compling runng
+can generate report,projct related documentation & packaing the project
+
+https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F
+
+
+jenkins
+cicd pipeline
+cucmber Hooks/background
+API testing
+
+
+
+
+Scenario: Validate Controls On Home Page
+	Given user opens browser
+	And
+	When user login to application
+	And 
+	Then user landed on home page
+	And I should see controls on home page
+	
+	
+	
+	Given ,When, Then, And
+	Gherkin Language plain text which will bind with background code
+	
+	
+	Test
+	Testcase Code (Reusable Methods) => Pages (Controls Methods)
+	testcase.java<=common.java<=page.java
+	
+	Cucumber
+	Features Gherkins(Scenario)=> Steps File (Link b/w Gherkin to Reusable Methods ) => Pages (Controls Methods)
+	.feature<=steps.java<=page.java
+	
+	
+	Step 1 => LoginPage.java
+	
+	@FindBy(how = How.ID, using = "input-phone-number")
+	WebElement phoneNumber;	
+	
+	@FindBy(how = How.XPath, using = "//select[@name='sl-partner-code']")
+	WebElement partner;
+	
+	@FindBy(how = How.XPath, using = "//button[text()='Proceed']")
+	WebElement proceedBtn;	
+	
+	
+	public void login(string phoneNumber,string partner){
+		this.phoneNumber.sendkeys(phoneNumber);
+		this.partner.select(partner);
+		proceedBtn.click();
+	}
+	
+	
+	public void enterOTP(string otpNumbers){
+		list<WebElement> inputs = driver.FindElements(By.xpath("//div[@id='c_w2974e10mm4nl7tdr']/input"));
+		for(int i=0;i<	otpNumbers.size();i++){
+			inputs[i].sendkeys(otpNumbers[i].tostring());
+		}
+	}
+	
+	
+	Step 2 => Common.java
+	private Login _login;
+	
+	public Login Login(){
+		if(_login==null)
+			SetLogin();
+		retrun _login;
+	}
+	
+	public void SetLogin(){
+		_login = new LoginPage();
+	}
+	
+	
+	
+	Step 3 => TestCase.Java inheritcs Common
+	
+	@test
+	public void ValidateHomePageControls(){
+	
+		Login().login("12345","sdjfbhadsfj");
+		Login().enterOTP("123456");
+		
+		Login().enterOTP("123456");
+		
+		Login().enterOTP("123456");
+		
+		
+		Login().enterOTP("123456");
+		
+		
+		
+		Login().enterOTP("123456");
+		
+		
+	}
+	
+	
+	java:
+Oops, wr exctly applied in you prject?
+inheritance and it's usage
+diff b/w overload and override?  real time usage
+
+list vs map
+hashmap vs dictionary
+getter,setters it's usage along with perfect sytax
+collections and generics
+
+
+
+Selenium:
+diff b/w findelement and findelements
+How many types of locators and it's sequence
+how to switch windows,frames
+handle alerts 
+read webtable
+syncronization/waits in selenium
+fluent waits vs explicti wait/default wait/default vs static wait along with syntax
+actions in selenium
+javascript executor for actions like click,set text etc
+wt is Page Object Model/POM?
+
+
+
+Git:
+commands like status,commit,fetch,push,pull,rebase,diff
+diff fetch and pull
+
+
+Files/SQL
+prerequisites for execute database query using java
+read property file usign java
+read excel file usign java
+ 
+
+programs:
+reverse a string without predefined methods ABC output CBA
+print A2B562 output will be AABBBBBCC
+reverse words 
+prime,armstrong,polidrom,sorting,factorial
+find duplicates in string
+
+
+
+Sql 
+2nd highest salary/number
+
+Java:
+Hashmap
+Dictionary
+Progrms to print A2B3C5 
+Connect to database
+
+
+Selenium
+Findelement
+FindElements
+Handle popups
+Syncronization
+Webdriver wait
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
